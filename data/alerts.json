@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "uid": "alert-001",
+      "device/link": "240004-MECCCA-SD-3057",
+      "hostname": "240004-MECCCA-SD-3057",
+      "ip_address": "10.20.0.101",
+      "intensity": "HIGH",
+      "metric": "CPU Utilization > 90%",
+      "active_since": 120,
+      "client": "MECCCA",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    },
+    {
+      "uid": "alert-002",
+      "device/link": "140093-LAN-10.20.0.252",
+      "hostname": "140093-LAN-10.20.0.252",
+      "ip_address": "10.20.0.252",
+      "intensity": "DOWN",
+      "metric": "Link Down (ICMP)",
+      "active_since": 5976,
+      "client": "Internal LAN",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    },
+    {
+      "uid": "alert-003",
+      "device/link": "140098-LAN-10.20.0.94",
+      "hostname": "140098-LAN-10.20.0.94",
+      "ip_address": "10.20.0.94",
+      "intensity": "HIGH",
+      "metric": "Packet Loss > 15%",
+      "active_since": 240,
+      "client": "Internal LAN",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    },
+    {
+      "uid": "alert-004",
+      "device/link": "150351-LAN-10.20.1.13",
+      "hostname": "150351-LAN-10.20.1.13",
+      "ip_address": "10.20.1.13",
+      "intensity": "DOWN",
+      "metric": "Interface Flapping / Down",
+      "active_since": 5976,
+      "client": "Branch LAN",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    },
+    {
+      "uid": "alert-005",
+      "device/link": "Beccca-Agent-2 (primary)",
+      "hostname": "Beccca-Agent-2 (primary)",
+      "ip_address": "10.20.0.15",
+      "intensity": "HIGH",
+      "metric": "Agent Heartbeat Missed",
+      "active_since": 180,
+      "client": "Beccca",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    },
+    {
+      "uid": "alert-006",
+      "device/link": "290004-BANTWAL-3101-D",
+      "hostname": "290004-BANTWAL-3101-D",
+      "ip_address": "10.30.1.5",
+      "intensity": "DOWN",
+      "metric": "Fiber Cut",
+      "active_since": 10276,
+      "client": "Bantwal Substation",
+      "bucket": "operational",
+      "acknowledged": true,
+      "ticket_id": "SR601810"
+    },
+    {
+      "uid": "alert-007",
+      "device/link": "240031-SHIVAMOGGA-426-IPDS",
+      "hostname": "240031-SHIVAMOGGA-426-IPDS",
+      "ip_address": "10.40.2.12",
+      "intensity": "DOWN",
+      "metric": "Power Failure",
+      "active_since": 10276,
+      "client": "Shivamogga IPDS",
+      "bucket": "operational",
+      "acknowledged": true,
+      "ticket_id": "SR601811"
+    },
+    {
+      "uid": "alert-008",
+      "device/link": "240005-BANGALORE-SD-1010",
+      "hostname": "240005-BANGALORE-SD-1010",
+      "ip_address": "10.10.0.50",
+      "intensity": "MEDIUM",
+      "metric": "High Memory Usage > 85%",
+      "active_since": 45,
+      "client": "Bangalore Hub",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    },
+    {
+      "uid": "alert-009",
+      "device/link": "240006-HUBBALI-SD-2020",
+      "hostname": "240006-HUBBALI-SD-2020",
+      "ip_address": "10.50.1.8",
+      "intensity": "STOPPED",
+      "metric": "BGP Peer Stopped",
+      "active_since": 10,
+      "client": "Hubbali PoP",
+      "bucket": "operational",
+      "acknowledged": false,
+      "ticket_id": ""
+    }
+  ]
+}

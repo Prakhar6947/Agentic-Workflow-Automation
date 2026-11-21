@@ -1,0 +1,1230 @@
+{
+  "date": {
+    "start": "2026-11-02T04:30:00",
+    "end": "2026-11-02T12:30:00"
+  },
+  "data": {
+    "performance_stats_table": {
+      "ip_table_info": {
+        "data": [
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 1",
+            "site_code": "MNG-100",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 2",
+            "site_code": "MNG-101",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 3",
+            "site_code": "MNG-102",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 4",
+            "site_code": "MNG-103",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 5",
+            "site_code": "MNG-104",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 6",
+            "site_code": "MNG-105",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 7",
+            "site_code": "MNG-106",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 8",
+            "site_code": "MNG-107",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 9",
+            "site_code": "MNG-108",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 10",
+            "site_code": "MNG-109",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 11",
+            "site_code": "MNG-110",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 12",
+            "site_code": "MNG-111",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 13",
+            "site_code": "MNG-112",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 14",
+            "site_code": "MNG-113",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 15",
+            "site_code": "MNG-114",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 16",
+            "site_code": "MNG-115",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 17",
+            "site_code": "MNG-116",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 18",
+            "site_code": "MNG-117",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 19",
+            "site_code": "MNG-118",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 20",
+            "site_code": "MNG-119",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 21",
+            "site_code": "MNG-120",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 22",
+            "site_code": "MNG-121",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 23",
+            "site_code": "MNG-200",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 24",
+            "site_code": "MNG-201",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 25",
+            "site_code": "MNG-202",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 26",
+            "site_code": "MNG-203",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 27",
+            "site_code": "MNG-204",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 28",
+            "site_code": "MNG-205",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 29",
+            "site_code": "MNG-206",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 30",
+            "site_code": "MNG-207",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 31",
+            "site_code": "MNG-208",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 32",
+            "site_code": "MNG-209",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 33",
+            "site_code": "MNG-210",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 34",
+            "site_code": "MNG-211",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 35",
+            "site_code": "MNG-212",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 36",
+            "site_code": "MNG-213",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 37",
+            "site_code": "MNG-214",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 38",
+            "site_code": "MNG-215",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 39",
+            "site_code": "MNG-216",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 40",
+            "site_code": "MNG-217",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 41",
+            "site_code": "MNG-218",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 42",
+            "site_code": "MNG-219",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 43",
+            "site_code": "MNG-220",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 44",
+            "site_code": "MNG-221",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 45",
+            "site_code": "MNG-222",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 46",
+            "site_code": "MNG-223",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 47",
+            "site_code": "MNG-224",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 48",
+            "site_code": "MNG-225",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 49",
+            "site_code": "MNG-226",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 50",
+            "site_code": "MNG-227",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 51",
+            "site_code": "MNG-228",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 52",
+            "site_code": "MNG-229",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 53",
+            "site_code": "MNG-230",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 54",
+            "site_code": "MNG-231",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 55",
+            "site_code": "MNG-232",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 56",
+            "site_code": "MNG-233",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 57",
+            "site_code": "MNG-234",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 58",
+            "site_code": "MNG-235",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 59",
+            "site_code": "MNG-236",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 60",
+            "site_code": "MNG-237",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 61",
+            "site_code": "MNG-238",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 62",
+            "site_code": "MNG-239",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 63",
+            "site_code": "MNG-240",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 64",
+            "site_code": "MNG-241",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 65",
+            "site_code": "MNG-242",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 66",
+            "site_code": "MNG-243",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 67",
+            "site_code": "MNG-244",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 68",
+            "site_code": "MNG-245",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 69",
+            "site_code": "MNG-246",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 70",
+            "site_code": "MNG-247",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 71",
+            "site_code": "MNG-248",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 72",
+            "site_code": "MNG-249",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 73",
+            "site_code": "MNG-250",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 74",
+            "site_code": "MNG-251",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 75",
+            "site_code": "MNG-252",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 76",
+            "site_code": "MNG-253",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 77",
+            "site_code": "MNG-254",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 78",
+            "site_code": "MNG-255",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 79",
+            "site_code": "MNG-256",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 80",
+            "site_code": "MNG-257",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 81",
+            "site_code": "MNG-258",
+            "uptime": 97.13,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "mangaluru",
+            "site_address": "Mangaluru Site 82",
+            "site_code": "MNG-259",
+            "uptime": 97.07,
+            "performance_score": 88.5,
+            "avg_latency": 24.5
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 1",
+            "site_code": "SHV-100",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 2",
+            "site_code": "SHV-101",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 3",
+            "site_code": "SHV-102",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 4",
+            "site_code": "SHV-103",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 5",
+            "site_code": "SHV-104",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 6",
+            "site_code": "SHV-105",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 7",
+            "site_code": "SHV-106",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 8",
+            "site_code": "SHV-107",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 9",
+            "site_code": "SHV-108",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 10",
+            "site_code": "SHV-109",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 11",
+            "site_code": "SHV-110",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 12",
+            "site_code": "SHV-111",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 13",
+            "site_code": "SHV-112",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 14",
+            "site_code": "SHV-113",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 15",
+            "site_code": "SHV-114",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 16",
+            "site_code": "SHV-115",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 17",
+            "site_code": "SHV-116",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 18",
+            "site_code": "SHV-117",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 19",
+            "site_code": "SHV-118",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 20",
+            "site_code": "SHV-119",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 21",
+            "site_code": "SHV-120",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 22",
+            "site_code": "SHV-121",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 23",
+            "site_code": "SHV-122",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 24",
+            "site_code": "SHV-123",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 25",
+            "site_code": "SHV-124",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 26",
+            "site_code": "SHV-125",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 27",
+            "site_code": "SHV-126",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 28",
+            "site_code": "SHV-127",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 29",
+            "site_code": "SHV-128",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 30",
+            "site_code": "SHV-129",
+            "uptime": 0.0,
+            "performance_score": 0.0,
+            "avg_latency": 0.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 31",
+            "site_code": "SHV-200",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 32",
+            "site_code": "SHV-201",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 33",
+            "site_code": "SHV-202",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 34",
+            "site_code": "SHV-203",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 35",
+            "site_code": "SHV-204",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 36",
+            "site_code": "SHV-205",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 37",
+            "site_code": "SHV-206",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 38",
+            "site_code": "SHV-207",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 39",
+            "site_code": "SHV-208",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 40",
+            "site_code": "SHV-209",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 41",
+            "site_code": "SHV-210",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 42",
+            "site_code": "SHV-211",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 43",
+            "site_code": "SHV-212",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 44",
+            "site_code": "SHV-213",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 45",
+            "site_code": "SHV-214",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 46",
+            "site_code": "SHV-215",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 47",
+            "site_code": "SHV-216",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 48",
+            "site_code": "SHV-217",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 49",
+            "site_code": "SHV-218",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 50",
+            "site_code": "SHV-219",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 51",
+            "site_code": "SHV-220",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 52",
+            "site_code": "SHV-221",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 53",
+            "site_code": "SHV-222",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 54",
+            "site_code": "SHV-223",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 55",
+            "site_code": "SHV-224",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 56",
+            "site_code": "SHV-225",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 57",
+            "site_code": "SHV-226",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 58",
+            "site_code": "SHV-227",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 59",
+            "site_code": "SHV-228",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 60",
+            "site_code": "SHV-229",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 61",
+            "site_code": "SHV-230",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 62",
+            "site_code": "SHV-231",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 63",
+            "site_code": "SHV-232",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 64",
+            "site_code": "SHV-233",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 65",
+            "site_code": "SHV-234",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 66",
+            "site_code": "SHV-235",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 67",
+            "site_code": "SHV-236",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 68",
+            "site_code": "SHV-237",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 69",
+            "site_code": "SHV-238",
+            "uptime": 94.94,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          },
+          {
+            "site_zone": "Shivamogga",
+            "site_address": "Shivamogga Site 70",
+            "site_code": "SHV-239",
+            "uptime": 94.84,
+            "performance_score": 76.0,
+            "avg_latency": 32.0
+          }
+        ]
+      }
+    }
+  }
+}

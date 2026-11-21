@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentic Workflow Automation Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'JetBrains Mono', monospace; }
+    .tab-btn.active { border-bottom-color: #3b82f6; color: #3b82f6; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <!-- Top Navigation -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+          ⚡
+        </div>
+        <div>
+          <h1 class="font-bold text-base leading-tight text-white">Agentic Workflow Automation Engine</h1>
+          <p class="text-xs text-slate-400">LangGraph Multi-Agent Pipeline &bull; Plugin Architecture &bull; Cron Scheduling</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-950 text-emerald-400 border border-emerald-800">
+          <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Engine Active
+        </span>
+        <a href="/docs" target="_blank" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-md border border-slate-700 transition">
+          Swagger Docs &rarr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+    <!-- Assignment Prompts Quick-Launcher Banner -->
+    <div class="bg-gradient-to-r from-blue-950/60 to-indigo-950/60 border border-blue-900/60 rounded-xl p-4 shadow-xl">
+      <div class="flex items-center justify-between mb-2">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 flex items-center">
+          <span class="mr-1.5">🚀</span> 1-Click Assignment Prompts
+        </h2>
+        <span class="text-xs text-slate-400">Click to instantly populate and run:</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <button onclick="setPrompt(1)" class="text-left bg-slate-900/80 hover:bg-slate-850 border border-slate-700 hover:border-blue-500/60 p-3 rounded-lg transition group">
+          <div class="flex items-center justify-between text-xs font-semibold text-blue-300 mb-1">
+            <span>Prompt 1: Daily Scheduled Alert Triage</span>
+            <span class="text-slate-500 group-hover:text-blue-400">&rarr;</span>
+          </div>
+          <p class="text-xs text-slate-400 line-clamp-2">"Every day at 9 AM, check all unresolved down and high alerts, summarize, create ticket for critical, email ops."</p>
+        </button>
+
+        <button onclick="setPrompt(2)" class="text-left bg-slate-900/80 hover:bg-slate-850 border border-slate-700 hover:border-blue-500/60 p-3 rounded-lg transition group">
+          <div class="flex items-center justify-between text-xs font-semibold text-emerald-300 mb-1">
+            <span>Prompt 2: WF002 Jira Ticketing</span>
+            <span class="text-slate-500 group-hover:text-emerald-400">&rarr;</span>
+          </div>
+          <p class="text-xs text-slate-400 line-clamp-2">"Create a high-priority Jira ticket for all devices that have been down for more than 15 minutes."</p>
+        </button>
+
+        <button onclick="setPrompt(3)" class="text-left bg-slate-900/80 hover:bg-slate-850 border border-slate-700 hover:border-blue-500/60 p-3 rounded-lg transition group">
+          <div class="flex items-center justify-between text-xs font-semibold text-purple-300 mb-1">
+            <span>Prompt 3: Dynamic Perf Report & Email</span>
+            <span class="text-slate-500 group-hover:text-purple-400">&rarr;</span>
+          </div>
+          <p class="text-xs text-slate-400 line-clamp-2">"Generate the performance report for Mumbai for last 6 hours and email it to test@gmail.com"</p>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="border-b border-slate-800 flex space-x-6">
+      <button onclick="switchTab('chat')" id="tab-chat" class="tab-btn active pb-3 px-1 border-b-2 border-transparent text-sm font-medium hover:text-white transition">
+        💬 Chat & Execution Console
+      </button>
+      <button onclick="switchTab('workflows')" id="tab-workflows" class="tab-btn pb-3 px-1 border-b-2 border-transparent text-sm font-medium text-slate-400 hover:text-white transition">
+        🗂 Workflows (Catalog & DAGs)
+      </button>
+      <button onclick="switchTab('schedules')" id="tab-schedules" class="tab-btn pb-3 px-1 border-b-2 border-transparent text-sm font-medium text-slate-400 hover:text-white transition">
+        ⏱ Schedules (Cron Triggers)
+      </button>
+      <button onclick="switchTab('executions')" id="tab-executions" class="tab-btn pb-3 px-1 border-b-2 border-transparent text-sm font-medium text-slate-400 hover:text-white transition">
+        📊 Executions & Step Logs
+      </button>
+      <button onclick="switchTab('tickets')" id="tab-tickets" class="tab-btn pb-3 px-1 border-b-2 border-transparent text-sm font-medium text-slate-400 hover:text-white transition">
+        🎫 Tickets & Email Logs
+      </button>
+      <button onclick="switchTab('plugins')" id="tab-plugins" class="tab-btn pb-3 px-1 border-b-2 border-transparent text-sm font-medium text-slate-400 hover:text-white transition">
+        🔌 Plugin Registry
+      </button>
+    </div>
+
+    <!-- TAB 1: Chat & Execution Console -->
+    <div id="content-chat" class="tab-content space-y-4">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Left: Input & DAG Flow -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg space-y-3">
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">
+              Natural Language Prompt
+            </label>
+            <textarea id="promptInput" rows="4" class="w-full bg-slate-950 border border-slate-700 rounded-lg p-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" placeholder="e.g. Every day at 9 AM, check unresolved down alerts, summarize, create tickets..."></textarea>
+            
+            <div class="flex items-center justify-between">
+              <label class="flex items-center space-x-2 text-xs text-slate-400 cursor-pointer">
+                <input type="checkbox" id="executeNowCheck" checked class="rounded border-slate-700 text-blue-600 focus:ring-blue-500 bg-slate-800">
+                <span>Execute immediately if scheduled</span>
+              </label>
+              <button onclick="executeChat()" id="runBtn" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-2 rounded-lg text-sm transition flex items-center shadow-md shadow-blue-600/30">
+                <span id="runSpinner" class="hidden mr-2">🔄</span>
+                <span>Run Agent Pipeline</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Multi-Agent Architecture Visualization -->
+          <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-4">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Multi-Agent State Flow</h3>
+            <div class="space-y-2 text-xs">
+              <div class="flex items-center space-x-2 p-2 rounded bg-slate-850 border border-slate-800">
+                <span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold">1</span>
+                <div>
+                  <div class="font-medium text-slate-200">Workflow Selection Agent</div>
+                  <div class="text-slate-400 text-[11px]">Routes to predefined WF001–WF004 or composes dynamic DAG</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 p-2 rounded bg-slate-850 border border-slate-800">
+                <span class="w-5 h-5 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">2</span>
+                <div>
+                  <div class="font-medium text-slate-200">Plugin Selection Agent</div>
+                  <div class="text-slate-400 text-[11px]">Resolves & validates Pydantic schema per step</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 p-2 rounded bg-slate-850 border border-slate-800">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">3</span>
+                <div>
+                  <div class="font-medium text-slate-200">Schedule Node (Conditional)</div>
+                  <div class="text-slate-400 text-[11px]">Registers CronTrigger in APScheduler & persists SQL schedule</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 p-2 rounded bg-slate-850 border border-slate-800">
+                <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">4</span>
+                <div>
+                  <div class="font-medium text-slate-200">Execution Agent</div>
+                  <div class="text-slate-400 text-[11px]">Evaluates safe AST conditions & runs plugins in order</div>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2 p-2 rounded bg-slate-850 border border-slate-800">
+                <span class="w-5 h-5 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold">5</span>
+                <div>
+                  <div class="font-medium text-slate-200">Reporting Agent</div>
+                  <div class="text-slate-400 text-[11px]">Synthesizes final Markdown report & persists execution log</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Execution Output -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg min-h-[420px] flex flex-col">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+              <div class="flex items-center space-x-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Agent Output Report</span>
+                <span id="statusBadge" class="hidden text-[10px] font-bold px-2 py-0.5 rounded uppercase"></span>
+              </div>
+              <div id="metaInfo" class="text-xs text-slate-400"></div>
+            </div>
+
+            <!-- Steps pill bar -->
+            <div id="stepBadges" class="flex flex-wrap gap-2 mb-3"></div>
+
+            <!-- Markdown Report Container -->
+            <div id="reportContainer" class="flex-1 overflow-y-auto prose prose-invert prose-sm max-w-none text-slate-300 bg-slate-950/50 p-4 rounded-lg border border-slate-800">
+              <p class="text-slate-500 italic">Select one of the 1-click prompts above or type an instruction to run the multi-agent pipeline.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Workflows -->
+    <div id="content-workflows" class="tab-content hidden space-y-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-base font-semibold text-white">Registered Workflows</h2>
+          <p class="text-xs text-slate-400">Predefined workflows (WF001–WF004) and dynamically composed DAGs.</p>
+        </div>
+        <button onclick="loadWorkflows()" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded border border-slate-700 text-slate-300">Refresh</button>
+      </div>
+      <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900 shadow">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950 text-slate-400 uppercase text-[10px] border-b border-slate-800">
+            <tr>
+              <th class="px-4 py-3">Code</th>
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">Type</th>
+              <th class="px-4 py-3">Steps / Plugins</th>
+              <th class="px-4 py-3 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody id="workflowsTableBody" class="divide-y divide-slate-800"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: Schedules -->
+    <div id="content-schedules" class="tab-content hidden space-y-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-base font-semibold text-white">APScheduler & SQL Schedules</h2>
+          <p class="text-xs text-slate-400">Cron triggers registered through chat or API, synchronized with background engine.</p>
+        </div>
+        <button onclick="loadSchedules()" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded border border-slate-700 text-slate-300">Refresh</button>
+      </div>
+      <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900 shadow">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950 text-slate-400 uppercase text-[10px] border-b border-slate-800">
+            <tr>
+              <th class="px-4 py-3">ID</th>
+              <th class="px-4 py-3">Name</th>
+              <th class="px-4 py-3">Workflow</th>
+              <th class="px-4 py-3">Cron Expression</th>
+              <th class="px-4 py-3">Next Run (UTC)</th>
+              <th class="px-4 py-3 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="schedulesTableBody" class="divide-y divide-slate-800"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 4: Executions & Step Logs -->
+    <div id="content-executions" class="tab-content hidden space-y-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-base font-semibold text-white">Execution Audit Monitor</h2>
+          <p class="text-xs text-slate-400">Step-by-step audit logs, AST condition evaluations, and duration tracking.</p>
+        </div>
+        <button onclick="loadExecutions()" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded border border-slate-700 text-slate-300">Refresh</button>
+      </div>
+      <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900 shadow">
+        <table class="w-full text-left text-xs text-slate-300">
+          <thead class="bg-slate-950 text-slate-400 uppercase text-[10px] border-b border-slate-800">
+            <tr>
+              <th class="px-4 py-3">ID</th>
+              <th class="px-4 py-3">Workflow</th>
+              <th class="px-4 py-3">Trigger</th>
+              <th class="px-4 py-3">Status</th>
+              <th class="px-4 py-3">Step Details</th>
+              <th class="px-4 py-3">Prompt</th>
+            </tr>
+          </thead>
+          <tbody id="executionsTableBody" class="divide-y divide-slate-800"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 5: Tickets & Outbox -->
+    <div id="content-tickets" class="tab-content hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Tickets -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <h3 class="text-sm font-semibold text-white">Created Tickets (Deduplicated)</h3>
+            <button onclick="loadTickets()" class="text-xs text-slate-400 hover:text-slate-200">Refresh</button>
+          </div>
+          <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900 shadow max-h-96">
+            <table class="w-full text-left text-xs text-slate-300">
+              <thead class="bg-slate-950 text-slate-400 uppercase text-[10px] border-b border-slate-800 sticky top-0">
+                <tr>
+                  <th class="px-3 py-2">Key</th>
+                  <th class="px-3 py-2">Priority</th>
+                  <th class="px-3 py-2">Device</th>
+                  <th class="px-3 py-2">Status</th>
+                </tr>
+              </thead>
+              <tbody id="ticketsTableBody" class="divide-y divide-slate-800"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Emails -->
+        <div class="space-y-3">
+          <div class="flex justify-between items-center">
+            <h3 class="text-sm font-semibold text-white">Email Outbox Logs</h3>
+            <button onclick="loadEmails()" class="text-xs text-slate-400 hover:text-slate-200">Refresh</button>
+          </div>
+          <div class="overflow-x-auto border border-slate-800 rounded-xl bg-slate-900 shadow max-h-96">
+            <table class="w-full text-left text-xs text-slate-300">
+              <thead class="bg-slate-950 text-slate-400 uppercase text-[10px] border-b border-slate-800 sticky top-0">
+                <tr>
+                  <th class="px-3 py-2">Recipient</th>
+                  <th class="px-3 py-2">Subject</th>
+                  <th class="px-3 py-2">Status</th>
+                </tr>
+              </thead>
+              <tbody id="emailsTableBody" class="divide-y divide-slate-800"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 6: Plugins Registry -->
+    <div id="content-plugins" class="tab-content hidden space-y-4">
+      <div>
+        <h2 class="text-base font-semibold text-white">Extensible Plugin Registry</h2>
+        <p class="text-xs text-slate-400">Plugins registered with `@register_plugin` and strictly validated using Pydantic schemas.</p>
+      </div>
+      <div id="pluginsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+
+  </main>
+
+  <script>
+    const prompts = {
+      1: "Every day at 9 AM, check all unresolved down and high operational alerts, generate a summary, create a ticket for each critical incident and email the report to the operations team.",
+      2: "Create a high-priority Jira ticket for all devices that have been down for more than 15 minutes.",
+      3: "Generate the performance report for Mumbai for last 6 hours and email it to test@gmail.com"
+    };
+
+    function setPrompt(n) {
+      document.getElementById('promptInput').value = prompts[n];
+      switchTab('chat');
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+
+      const activeBtn = document.getElementById('tab-' + tabId);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const content = document.getElementById('content-' + tabId);
+      if (content) content.classList.remove('hidden');
+
+      if (tabId === 'workflows') loadWorkflows();
+      if (tabId === 'schedules') loadSchedules();
+      if (tabId === 'executions') loadExecutions();
+      if (tabId === 'tickets') { loadTickets(); loadEmails(); }
+      if (tabId === 'plugins') loadPlugins();
+    }
+
+    async function executeChat() {
+      const prompt = document.getElementById('promptInput').value.trim();
+      if (!prompt) return;
+
+      const executeNow = document.getElementById('executeNowCheck').checked;
+      const runBtn = document.getElementById('runBtn');
+      const spinner = document.getElementById('runSpinner');
+      const reportDiv = document.getElementById('reportContainer');
+      const badgesDiv = document.getElementById('stepBadges');
+      const statusBadge = document.getElementById('statusBadge');
+      const metaInfo = document.getElementById('metaInfo');
+
+      runBtn.disabled = true;
+      spinner.classList.remove('hidden');
+      reportDiv.innerHTML = '<p class="text-blue-400 animate-pulse">Orchestrating multi-agent pipeline (Workflow Selection &rarr; Plugin Selection &rarr; Execution &rarr; Reporting)...</p>';
+      badgesDiv.innerHTML = '';
+      statusBadge.classList.add('hidden');
+      metaInfo.textContent = '';
+
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({prompt, execute_now: executeNow})
+        });
+        const data = await res.json();
+
+        statusBadge.classList.remove('hidden');
+        if (data.status === 'completed') {
+          statusBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded uppercase bg-emerald-950 text-emerald-400 border border-emerald-800';
+          statusBadge.textContent = 'Completed';
+        } else {
+          statusBadge.className = 'text-[10px] font-bold px-2 py-0.5 rounded uppercase bg-rose-950 text-rose-400 border border-rose-800';
+          statusBadge.textContent = data.status || 'Failed';
+        }
+
+        metaInfo.innerHTML = `Mode: <span class="font-semibold text-slate-200">${data.mode}</span> | WF: <span class="font-mono text-blue-400">${data.workflow_code}</span> | Exec: <span class="text-slate-200">#${data.execution_id || 'N/A'}</span>`;
+
+        if (data.step_results && data.step_results.length) {
+          badgesDiv.innerHTML = data.step_results.map(s => {
+            const isSkipped = s.status === 'skipped';
+            const isDone = s.status === 'completed';
+            const color = isDone ? 'bg-emerald-950/80 text-emerald-300 border-emerald-800' : (isSkipped ? 'bg-amber-950/80 text-amber-300 border-amber-800' : 'bg-rose-950/80 text-rose-300 border-rose-800');
+            return `<span class="inline-flex items-center text-xs px-2.5 py-1 rounded border ${color}">
+              <span class="font-semibold mr-1">${s.step}</span>
+              <span class="text-[10px] opacity-75">(${s.plugin} - ${s.status}${s.duration_ms !== undefined ? `, ${s.duration_ms}ms` : ''})</span>
+            </span>`;
+          }).join('');
+        }
+
+        reportDiv.innerHTML = marked.parse(data.report || 'No output report synthesized.');
+      } catch (err) {
+        reportDiv.innerHTML = `<p class="text-rose-400">Execution Error: ${err.message}</p>`;
+      } finally {
+        runBtn.disabled = false;
+        spinner.classList.add('hidden');
+      }
+    }
+
+    async function loadWorkflows() {
+      const res = await fetch('/api/workflows');
+      const list = await res.json();
+      const tbody = document.getElementById('workflowsTableBody');
+      tbody.innerHTML = list.map(w => {
+        const steps = w.definition.steps || [];
+        const stepsHtml = steps.map(s => `<span class="inline-block bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded mr-1 mb-1 font-mono text-[11px]">${s.plugin} ${s.condition !== 'always' ? `[if: ${s.condition}]` : ''}</span>`).join('');
+        return `<tr>
+          <td class="px-4 py-3 font-mono font-bold text-blue-400">${w.code}</td>
+          <td class="px-4 py-3">
+            <div class="font-medium text-slate-200">${w.name}</div>
+            <div class="text-[11px] text-slate-400">${w.description}</div>
+          </td>
+          <td class="px-4 py-3"><span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold ${w.type === 'predefined' ? 'bg-blue-950 text-blue-400 border border-blue-800' : 'bg-purple-950 text-purple-400 border border-purple-800'}">${w.type}</span></td>
+          <td class="px-4 py-3">${stepsHtml}</td>
+          <td class="px-4 py-3 text-right">
+            <button onclick="runManualWorkflow('${w.code}')" class="text-xs bg-blue-600 hover:bg-blue-500 text-white px-2.5 py-1 rounded transition">Execute</button>
+          </td>
+        </tr>`;
+      }).join('');
+    }
+
+    async function runManualWorkflow(code) {
+      switchTab('chat');
+      document.getElementById('promptInput').value = `Run workflow ${code}`;
+      executeChat();
+    }
+
+    async function loadSchedules() {
+      const res = await fetch('/api/schedules');
+      const list = await res.json();
+      const tbody = document.getElementById('schedulesTableBody');
+      tbody.innerHTML = list.length === 0 ? '<tr><td colspan="6" class="px-4 py-4 text-center text-slate-500">No active schedules registered yet.</td></tr>' : list.map(s => `<tr>
+        <td class="px-4 py-3 font-mono text-slate-400">#${s.id}</td>
+        <td class="px-4 py-3 font-medium text-slate-200">${s.name}</td>
+        <td class="px-4 py-3 font-mono text-blue-400">${s.workflow_code || ('WF #' + s.workflow_id)}</td>
+        <td class="px-4 py-3 font-mono bg-slate-950 px-2 rounded text-emerald-400">${s.cron}</td>
+        <td class="px-4 py-3 text-slate-300">${s.next_run_at || 'Pending'}</td>
+        <td class="px-4 py-3 text-right space-x-2">
+          <button onclick="triggerSchedule(${s.id})" class="text-xs bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded transition">Trigger Now</button>
+          <button onclick="deleteSchedule(${s.id})" class="text-xs bg-rose-600/80 hover:bg-rose-500 text-white px-2 py-1 rounded transition">Delete</button>
+        </td>
+      </tr>`).join('');
+    }
+
+    async function triggerSchedule(id) {
+      const res = await fetch(`/api/schedules/${id}/trigger`, {method: 'POST'});
+      const data = await res.json();
+      alert(`Schedule #${id} triggered! Execution #${data.execution_id} completed.`);
+      loadSchedules();
+    }
+
+    async function deleteSchedule(id) {
+      if (!confirm(`Delete schedule #${id}?`)) return;
+      await fetch(`/api/schedules/${id}`, {method: 'DELETE'});
+      loadSchedules();
+    }
+
+    async function loadExecutions() {
+      const res = await fetch('/api/executions');
+      const list = await res.json();
+      const tbody = document.getElementById('executionsTableBody');
+      tbody.innerHTML = list.map(e => {
+        const stepsBadge = (e.steps || []).map(s => {
+          const isSkipped = s.status === 'skipped';
+          const isDone = s.status === 'completed';
+          const badgeClass = isDone ? 'text-emerald-400' : (isSkipped ? 'text-amber-400' : 'text-rose-400');
+          return `<span class="inline-block mr-2 font-mono text-[11px] ${badgeClass}">${s.step} (${s.status}, ${s.ms}ms)</span>`;
+        }).join('');
+        return `<tr>
+          <td class="px-4 py-3 font-mono text-slate-400">#${e.id}</td>
+          <td class="px-4 py-3 font-mono text-blue-400">${e.workflow_code}</td>
+          <td class="px-4 py-3 uppercase text-[10px] text-slate-400">${e.trigger}</td>
+          <td class="px-4 py-3">
+            <span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold ${e.status === 'completed' ? 'bg-emerald-950 text-emerald-400 border border-emerald-800' : 'bg-rose-950 text-rose-400 border border-rose-800'}">${e.status}</span>
+          </td>
+          <td class="px-4 py-3">${stepsBadge}</td>
+          <td class="px-4 py-3 text-slate-400 max-w-xs truncate">${e.prompt || ''}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    async function loadTickets() {
+      const res = await fetch('/api/tickets');
+      const list = await res.json();
+      const tbody = document.getElementById('ticketsTableBody');
+      tbody.innerHTML = list.length === 0 ? '<tr><td colspan="4" class="px-3 py-4 text-center text-slate-500">No tickets created yet.</td></tr>' : list.map(t => `<tr>
+        <td class="px-3 py-2 font-mono font-semibold text-blue-400">${t.key}</td>
+        <td class="px-3 py-2"><span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${t.priority === 'CRITICAL' ? 'bg-rose-950 text-rose-400' : 'bg-amber-950 text-amber-400'}">${t.priority}</span></td>
+        <td class="px-3 py-2 text-slate-200">${t.device}</td>
+        <td class="px-3 py-2 text-slate-400">${t.status}</td>
+      </tr>`).join('');
+    }
+
+    async function loadEmails() {
+      const res = await fetch('/api/emails');
+      const list = await res.json();
+      const tbody = document.getElementById('emailsTableBody');
+      tbody.innerHTML = list.length === 0 ? '<tr><td colspan="3" class="px-3 py-4 text-center text-slate-500">No email logs yet.</td></tr>' : list.map(e => `<tr>
+        <td class="px-3 py-2 text-slate-300 font-mono text-[11px]">${e.to}</td>
+        <td class="px-3 py-2 text-slate-200">${e.subject}</td>
+        <td class="px-3 py-2"><span class="px-1.5 py-0.5 rounded text-[10px] font-mono bg-emerald-950 text-emerald-400 border border-emerald-800">${e.status}</span></td>
+      </tr>`).join('');
+    }
+
+    async function loadPlugins() {
+      const res = await fetch('/api/plugins');
+      const list = await res.json();
+      const grid = document.getElementById('pluginsGrid');
+      grid.innerHTML = list.map(p => `
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-mono font-bold text-sm text-blue-400">${p.name}</span>
+            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">${p.category}</span>
+          </div>
+          <p class="text-xs text-slate-400">${p.description}</p>
+          <div class="text-[11px] text-slate-500 font-mono bg-slate-950 p-2 rounded overflow-x-auto max-h-32">
+            ${JSON.stringify(p.schema.properties, null, 2)}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Auto-load initial data
+    loadWorkflows();
+  </script>
+</body>
+</html>
